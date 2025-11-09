@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "author": "ChatGPT",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-v1",
+      "id": "esp32",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "tmp36",
+      "id": "tmp1",
+      "top": -30,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "led",
+      "id": "heaterLed",
+      "top": 130,
+      "left": 320,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "buzzer",
+      "id": "buzz1",
+      "top": 50,
+      "left": 320,
+      "attrs": {}
+    },
+    {
+      "type": "led",
+      "id": "statusLed",
+      "top": 130,
+      "left": 380,
+      "attrs": {
+        "color": "green"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "tmp1:VCC",
+      "esp32:3V3",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "tmp1:GND",
+      "esp32:GND.1",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "tmp1:VOUT",
+      "esp32:34",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "heaterLed:A",
+      "esp32:25",
+      "orange",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "heaterLed:C",
+      "esp32:GND.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "buzz1:1",
+      "esp32:27",
+      "blue",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "buzz1:2",
+      "esp32:GND.3",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "statusLed:A",
+      "esp32:2",
+      "yellow",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "statusLed:C",
+      "esp32:GND.4",
+      "black",
+      [
+        "h0"
+      ]
+    ]
+  ]
+}
